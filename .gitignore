@@ -1,0 +1,16 @@
+node_modules/
+/artifacts/
+npm-debug.log
+.DS_STORE
+.*.swp
+database.*
+config/local.*
+.func_config
+.nyc_output
+data/*
+package-lock.json
+docker-compose.yml
+mw-data
+.vscode
+.envrc
+.node-version

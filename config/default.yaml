@@ -1,0 +1,24 @@
+---
+ecosystem:
+  store: http://IP_ADDRESS:PORT
+
+queue:
+  redisConnection:
+    host: REDIS_HOST
+    port: REDIS_PORT
+    options:
+      password: a-secure-password
+      tls: false
+    database: 0
+  prefix: ''
+
+unzip-worker:
+  # https://github.com/taskrabbit/node-resque#multiworker-options
+  # minimum number of workers to spawn
+  minTaskProcessors: 1
+  # maximum number of workers to spawn
+  maxTaskProcessors: 10
+  # how often to check if the event loop is blocked (ms)
+  checkTimeout: 1000
+  # how long the event loop has to be delayed before considering it blocked (ms)
+  maxEventLoopDelay: 10
